@@ -1,0 +1,14 @@
+{
+  "site": {
+    "title": "Ramza Portfolio Rebalancing Calculator",
+    "description": "Calculate buy and sell share quantities from target portfolio weights with Ramza"
+  },
+  "home": {
+    "title": "Ramza Portfolio Rebalancing Calculator",
+    "description": "Compute integer share quantities from a budget and target weights, and rebalance existing holdings with additional buys and sells."
+  },
+  "rebalancing": {
+    "title": "Ramza Portfolio Rebalancing Calculator | Buy & Sell by Target Allocation",
+    "description": "Calculate shares to buy or sell to match your target allocation. Supports portfolio rebalancing with new capital, current holdings, and remaining cash."
+  }
+}

@@ -10,7 +10,12 @@ export interface ModalState {
   content?: ReactNode;
   confirmText?: string;
   cancelText?: string;
-  onConfirm?: () => void;
+  /** When false, hide the primary confirm button (list/select modals). */
+  hideConfirm?: boolean;
+  /** Optional wider panel for list content. */
+  size?: "md" | "lg";
+  /** Return `false` to keep the modal open (e.g. validation failure). */
+  onConfirm?: () => void | boolean;
   onCancel?: () => void;
 }
 

@@ -1,0 +1,49 @@
+{
+  "appName": "Ramza",
+  "h1": "Ramza Portfolio Rebalancing Calculator",
+  "language": "Language",
+  "currency": "Currency",
+  "home": {
+    "title": "Ramza Portfolio Rebalancing Calculator",
+    "description": "Calculate buy and sell share quantities from target portfolio weights with Ramza.",
+    "goToCalculator": "Go to rebalancing calculator",
+    "introHeading": "Buy and sell shares aligned to your target allocation",
+    "introBody": [
+      "With Ramza, enter your stock and ETF target allocation to see whole-share buys and sells plus remaining cash.",
+      "Split new capital with simple buy mode, or rebalance existing holdings with an additional contribution—all in one place."
+    ]
+  },
+  "nav": {
+    "rebalancing": "Rebalancing"
+  },
+  "shell": {
+    "badge": "Ramza · Portfolio Rebalancing",
+    "h1Before": "Ramza Portfolio ",
+    "h1Accent": "Rebalancing",
+    "h1After": " Calculator",
+    "howTo": "How to use",
+    "lead": "Enter a purchase budget or your holdings with target weights to get buy and sell quantities plus a cash sleeve. Use simple buy allocation or full portfolio rebalancing in one place.",
+    "basic": {
+      "eyebrow": "MAIN TOOL",
+      "title": "Simple buy rebalancing",
+      "description": "Split a purchase budget by target weights into share quantities."
+    },
+    "portfolio": {
+      "eyebrow": "SUB TOOL",
+      "title": "Portfolio-based rebalancing",
+      "description": "Match target weights using holdings and new cash—including sells when needed."
+    },
+    "steps": {
+      "basic": {
+        "1": "Enter purchase budget",
+        "2": "Set tickers & target weights",
+        "3": "Review buy quantities"
+      },
+      "portfolio": {
+        "1": "Enter current holdings",
+        "2": "Set contribution & targets",
+        "3": "Review buys and sells"
+      }
+    }
+  }
+}

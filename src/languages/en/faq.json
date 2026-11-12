@@ -1,0 +1,36 @@
+{
+  "heading": "Frequently asked questions",
+  "countLabel": "FAQ · {{count}} items",
+  "items": [
+    {
+      "id": "what-is-rebalancing",
+      "question": "What is rebalancing?",
+      "answer": "Rebalancing means adjusting each asset’s weight in your portfolio back to the target allocation you set. When stock or ETF prices move, some holdings become overweight or underweight. You sell part of what grew too large or buy what fell behind so your intended asset mix stays in place over time."
+    },
+    {
+      "id": "how-to-use",
+      "question": "How can I use the rebalancing calculator?",
+      "answer": "Enter the names, prices, and share counts of the stocks or ETFs you hold. Then set each asset’s target weight and any additional investment amount to calculate the buy and sell quantities needed. The results show expected holdings after rebalancing, values by asset, final weights, and remaining cash."
+    },
+    {
+      "id": "how-often",
+      "question": "How often should I rebalance?",
+      "answer": "The right cadence depends on your strategy and holdings. Many investors review monthly, quarterly, semiannually, or yearly. You can also rebalance only when weights drift beyond a set threshold. Rebalancing too often can raise trading fees and taxes, so choose a schedule that fits your horizon and costs."
+    },
+    {
+      "id": "trade-as-is",
+      "question": "Should I trade exactly as the results say?",
+      "answer": "Results are an estimated trade plan based on the holdings, prices, target weights, and contribution you entered. Before trading, check live market prices, fees, taxes, and available buying power. Shares are rounded to whole numbers, so final weights may differ slightly from targets. Use the output as a reference for your own decisions."
+    },
+    {
+      "id": "weight-under-100",
+      "question": "What if target weights don’t add up to 100%?",
+      "answer": "If the sum of stock target weights is below 100%, the remainder is treated as cash. For example, Apple 30%, Amazon 30%, and Test 30% leaves a 10% cash sleeve. That lets you keep part of the portfolio in cash instead of fully invested. If the sum exceeds 100%, review and correct the weights you entered."
+    },
+    {
+      "id": "who-is-it-for",
+      "question": "Who is this calculator for?",
+      "answer": "It suits long-term investors who manage a stock or ETF portfolio. It is especially useful when you split capital across ETFs such as VOO, QQQ, or SCHD, or when you want to keep individual stocks at set target weights. Use it to plan buys and sells that bring current holdings plus new cash toward your allocation."
+    }
+  ]
+}

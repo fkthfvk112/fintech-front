@@ -5,10 +5,27 @@
 :root {
   --foreground-rgb: 15, 23, 42;
   --background-rgb: 248, 250, 252;
+  /* 기본(ko): Pretendard — CDN으로 로드 */
+  --font-app: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, "Segoe UI", sans-serif;
+}
+
+html[lang="en"] {
+  --font-app: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+html[lang="ja"] {
+  --font-app: var(--font-noto-sans-jp), "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+}
+
+html {
+  font-family: var(--font-app);
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background-color: rgb(var(--background-rgb));
   min-height: 100vh;
+  font-family: inherit;
 }

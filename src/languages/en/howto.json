@@ -1,0 +1,181 @@
+{
+  "toggleOpen": "Show details",
+  "toggleClose": "Hide details",
+  "basic": {
+    "title": "How to use the stock & ETF buy calculator",
+    "summary": [
+      "Allocate your new investment across stocks or ETFs by target allocation, then see shares to buy and the actual buy amount for each ticker.",
+      "This mode ignores current holdings and sells. Use it when you only want to plan buys with fresh capital."
+    ],
+    "stepsHeading": "How to use",
+    "steps": [
+      {
+        "label": "1. Enter total buy amount",
+        "body": "Enter the full budget for this round of stock and ETF purchases. For example, with $10,000 the calculator allocates each ticker’s buy amount from that total."
+      },
+      {
+        "label": "2. Enter tickers and prices",
+        "body": "Enter each ticker name and share price. The name labels results; the price is the basis for shares to buy. Add rows for more holdings. Prices are not live quotes—calculations use the values you enter."
+      },
+      {
+        "label": "3. Set target allocation",
+        "body": "Enter the share of the buy budget for each ticker. For example, 50% in ETF A and 40% in ETF B leaves 10% as remaining cash. Allocations above 100% cannot be calculated."
+      }
+    ],
+    "resultsHeading": "Understanding the results",
+    "resultsIntro": "After you calculate, you can review target buy amount, shares to buy, actual buy amount, and cash for each ticker.",
+    "results": [
+      {
+        "label": "Target buy amount",
+        "body": "Total budget multiplied by the target allocation."
+      },
+      {
+        "label": "Shares to buy",
+        "body": "Target buy amount divided by share price, floored to whole shares."
+      },
+      {
+        "label": "Actual buy amount",
+        "body": "Shares to buy × share price."
+      },
+      {
+        "label": "Actual weight",
+        "body": "Actual buy amount as a share of the total budget."
+      },
+      {
+        "label": "Cash",
+        "body": "Budget left after actual buys—includes unallocated weight and floor leftovers."
+      }
+    ],
+    "exampleHeading": "Why doesn’t the actual buy match the target amount?",
+    "exampleIntro": "This calculator assumes whole-share trades. Stocks and ETFs are bought in 1-share units by default, so results may undershoot the exact target amount.",
+    "exampleTitle": "Worked example",
+    "exampleSetup": "Total buy amount $1,000 · ETF A target allocation 50% · share price $30",
+    "exampleItems": [
+      "Target buy amount: $500",
+      "Raw shares: 500 ÷ 30 = 16.66…",
+      "Shares to buy: 16",
+      "Actual buy amount: $480",
+      "Leftover: $20 → remaining cash"
+    ],
+    "useCasesHeading": "Good for",
+    "useCases": [
+      "Splitting a monthly investment across ETFs by target allocation",
+      "Calculating shares to buy for VOO, QQQ, SCHD, and similar ETFs at once",
+      "Building a first asset-allocation plan with new capital",
+      "Allocating new money without considering existing holdings"
+    ],
+    "notesHeading": "Things to know",
+    "notes": [
+      "Current holdings are not included.",
+      "Shares to sell are not calculated.",
+      "If target allocations sum to less than 100%, the gap stays as cash.",
+      "Whole-share rounding can leave a gap between target and actual buy amounts.",
+      "Live quotes, commissions, and taxes are not included.",
+      "To rebalance existing holdings as well, switch to the Portfolio-based calculator."
+    ]
+  },
+  "portfolio": {
+    "title": "How to use the Ramza Portfolio Rebalancing Calculator",
+    "summary": [
+      "Combine current holdings with new capital to compute shares to buy or sell toward your target allocation.",
+      "When portfolio weights drift from your plan, see how many shares of each ticker to buy or sell."
+    ],
+    "stepsHeading": "How to use",
+    "steps": [
+      {
+        "label": "1. Enter current portfolio",
+        "body": "Enter ticker, share price, and current holdings for each stock or ETF. Position value = price × shares; multiple rows sum to total holdings value."
+      },
+      {
+        "label": "2. Enter additional buy amount",
+        "body": "Enter new capital for this rebalance. Total portfolio value = current holdings value + additional buy amount. Example: holdings $5,000 plus $1,000 new cash → $6,000 total portfolio value."
+      },
+      {
+        "label": "3. Set target tickers and allocation",
+        "body": "Set the target allocation you want after rebalancing. You can keep existing tickers or add new ones. Any weight under 100% stays as remaining cash."
+      },
+      {
+        "label": "4. Run rebalancing",
+        "body": "Target shares are compared with current holdings: buy if short, hold if equal, sell if overweight. Review buy/sell actions and the post-rebalance portfolio."
+      }
+    ],
+    "resultsHeading": "Understanding the results",
+    "resultsIntro": "You can review buy/sell actions and the final portfolio together.",
+    "resultsGroups": [
+      {
+        "heading": "Buy & sell actions",
+        "items": [
+          {
+            "label": "Buy tab",
+            "body": "Tickers below target shares and how many shares to buy."
+          },
+          {
+            "label": "Sell tab",
+            "body": "Tickers above target shares and how many shares to sell."
+          },
+          {
+            "label": "Buy / sell amounts",
+            "body": "Estimated trade value from the suggested share counts."
+          }
+        ]
+      },
+      {
+        "heading": "Final portfolio",
+        "items": [
+          {
+            "label": "Final shares",
+            "body": "Current holdings after applying buys and sells."
+          },
+          {
+            "label": "Final market value",
+            "body": "Final shares × reference price."
+          },
+          {
+            "label": "Final weight",
+            "body": "Final market value as a share of total portfolio value."
+          },
+          {
+            "label": "Remaining cash",
+            "body": "Total portfolio value minus final equity value."
+          }
+        ]
+      }
+    ],
+    "exampleHeading": "Why don’t final weights match the target allocation exactly?",
+    "exampleIntro": "Whole-share buys and sells cannot hit every target weight precisely. Target shares are floored, so leftover dollars stay as cash. Different share prices also mean a one-share gap can move final weights.",
+    "exampleTitle": "Why is there remaining cash?",
+    "exampleSetup": "Cash includes both the unallocated sleeve you set (e.g. 90% equity / 10% cash keeps at least 10% cash) and leftovers from whole-share rounding.",
+    "exampleItems": [],
+    "useCasesHeading": "Good for",
+    "useCases": [
+      "Realigning an existing multi-ticker stock and ETF portfolio to target allocation",
+      "Adding capital to a VOO / QQQ / SCHD-style ETF portfolio",
+      "When one ticker’s rally has pushed its portfolio weight too high",
+      "Checking whether buys alone can restore the target allocation",
+      "Estimating whether—and how much—you may need to sell"
+    ],
+    "notesHeading": "Things to know",
+    "notes": [
+      "Total portfolio value is holdings market value plus new capital.",
+      "Target shares are floored from target amount ÷ share price.",
+      "If current holdings exceed target shares, shares to sell appear.",
+      "Allocations under 100% leave the gap as cash.",
+      "Entering a different price for the same ticker can revalue existing holdings—check any price-mismatch notice.",
+      "Save/load uses this browser’s local storage only; nothing is stored on a server.",
+      "Live quotes, commissions, taxes, and fills are not included.",
+      "Tax and trading costs on sells should be checked separately.",
+      "Sell amounts are a math result for target allocation—not a recommendation to sell any ticker."
+    ]
+  },
+  "common": {
+    "rulesHeading": "Shared calculation rules",
+    "rules": [
+      "Convert target allocation into a dollar (or currency) amount.",
+      "Divide by share price and take whole shares.",
+      "Trade whole shares; leftovers become remaining cash.",
+      "Allocations above 100% cannot be calculated.",
+      "Allocations under 100% keep the unallocated weight as cash."
+    ],
+    "disclaimer": "This calculator builds an estimated trade plan from the prices and quantities you enter. It does not include live quotes, quote changes, commissions, taxes, or actual fills. Results are for reference only; investment decisions and orders are your responsibility."
+  }
+}
