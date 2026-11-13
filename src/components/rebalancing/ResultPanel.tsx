@@ -86,16 +86,30 @@ export function ResultPanel({ result, currency, stale, onReset }: ResultPanelPro
       </div>
 
       <div className="overflow-x-auto">
-        <table className="min-w-full text-left text-sm">
+        <table className="w-max min-w-full text-left text-sm">
           <thead>
-            <tr className="border-b border-slate-200 text-xs uppercase tracking-wide text-slate-500">
-              <th className="px-2 py-2 font-medium">{t("result.stockName")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.unitPrice")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.targetWeight")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.targetAmount")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.shares")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.actualAmount")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.actualWeight")}</th>
+            <tr className="border-b border-slate-200 text-xs tracking-wide text-slate-500">
+              <th className="min-w-[6rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.stockName")}
+              </th>
+              <th className="min-w-[6rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.unitPrice")}
+              </th>
+              <th className="min-w-[5.5rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.targetWeight")}
+              </th>
+              <th className="min-w-[6.5rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.targetAmount")}
+              </th>
+              <th className="min-w-[5.5rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.shares")}
+              </th>
+              <th className="min-w-[6.5rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.actualAmount")}
+              </th>
+              <th className="min-w-[5.5rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.actualWeight")}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -106,19 +120,25 @@ export function ResultPanel({ result, currency, stale, onReset }: ResultPanelPro
                   s.isCash ? "bg-slate-50" : ""
                 }`}
               >
-                <td className="px-2 py-2.5 font-medium">{s.name}</td>
-                <td className="px-2 py-2.5">
+                <td className="min-w-[6rem] whitespace-nowrap px-2 py-2.5 font-medium">
+                  {s.name}
+                </td>
+                <td className="min-w-[6rem] whitespace-nowrap px-2 py-2.5">
                   {s.isCash ? "—" : formatMoney(s.price, currency)}
                 </td>
-                <td className="px-2 py-2.5">
+                <td className="min-w-[5.5rem] whitespace-nowrap px-2 py-2.5">
                   {formatGroupedNumber(s.targetWeight, { maxFractionDigits: 3 })}%
                 </td>
-                <td className="px-2 py-2.5">{formatMoney(s.targetAmount, currency)}</td>
-                <td className="px-2 py-2.5 font-semibold">
+                <td className="min-w-[6.5rem] whitespace-nowrap px-2 py-2.5">
+                  {formatMoney(s.targetAmount, currency)}
+                </td>
+                <td className="min-w-[5.5rem] whitespace-nowrap px-2 py-2.5 font-semibold">
                   {s.isCash ? "—" : s.shares}
                 </td>
-                <td className="px-2 py-2.5">{formatMoney(s.actualAmount, currency)}</td>
-                <td className="px-2 py-2.5">
+                <td className="min-w-[6.5rem] whitespace-nowrap px-2 py-2.5">
+                  {formatMoney(s.actualAmount, currency)}
+                </td>
+                <td className="min-w-[5.5rem] whitespace-nowrap px-2 py-2.5">
                   {formatGroupedNumber(s.actualWeight, { maxFractionDigits: 2 })}%
                 </td>
               </tr>

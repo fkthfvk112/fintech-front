@@ -146,18 +146,28 @@ export function PortfolioResultPanel({
       </div>
 
       <div className="overflow-x-auto">
-        <table className="min-w-full text-left text-sm">
+        <table className="w-max min-w-full text-left text-sm">
           <thead>
-            <tr className="border-b border-slate-200 text-xs uppercase tracking-wide text-slate-500">
-              <th className="px-2 py-2 font-medium">{t("result.name")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.price")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.targetWeight")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.targetAmount")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.previousQty")}</th>
-              <th className="px-2 py-2 font-medium">
+            <tr className="border-b border-slate-200 text-xs tracking-wide text-slate-500">
+              <th className="min-w-[6rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.name")}
+              </th>
+              <th className="min-w-[6rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.price")}
+              </th>
+              <th className="min-w-[5.5rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.targetWeight")}
+              </th>
+              <th className="min-w-[6.5rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.targetAmount")}
+              </th>
+              <th className="min-w-[7.5rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.previousQty")}
+              </th>
+              <th className="min-w-[5.5rem] whitespace-nowrap px-2 py-2 font-medium">
                 {mode === "buy" ? t("result.buyQty") : t("result.sellQty")}
               </th>
-              <th className="px-2 py-2 font-medium">
+              <th className="min-w-[6rem] whitespace-nowrap px-2 py-2 font-medium">
                 {mode === "buy" ? t("result.buyAmount") : t("result.sellAmount")}
               </th>
             </tr>
@@ -188,10 +198,13 @@ export function PortfolioResultPanel({
           </tbody>
           <tfoot>
             <tr className="border-t-2 border-slate-300 bg-slate-50 font-semibold text-slate-800">
-              <td colSpan={6} className="px-2 py-2.5 text-right">
+              <td colSpan={6} className="whitespace-nowrap px-2 py-2.5 text-right">
                 {mode === "buy" ? t("result.buyTotal") : t("result.sellTotal")}
               </td>
-              <td className="px-2 py-2.5 tabular-nums" style={{ color: modeColor }}>
+              <td
+                className="min-w-[6rem] whitespace-nowrap px-2 py-2.5 tabular-nums"
+                style={{ color: modeColor }}
+              >
                 {formatMoney(modeTotal, currency)}
               </td>
             </tr>
@@ -203,17 +216,33 @@ export function PortfolioResultPanel({
         <h3 className="mb-3 text-sm font-semibold text-slate-800">
           {t("result.finalHoldings")}
         </h3>
-        <table className="min-w-full text-left text-sm">
+        <table className="w-max min-w-full text-left text-sm">
           <thead>
-            <tr className="border-b border-slate-200 text-xs uppercase tracking-wide text-slate-500">
-              <th className="px-2 py-2 font-medium">{t("result.name")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.price")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.previousQty")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.buyQty")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.sellQty")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.finalQty")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.finalAmount")}</th>
-              <th className="px-2 py-2 font-medium">{t("result.finalWeight")}</th>
+            <tr className="border-b border-slate-200 text-xs tracking-wide text-slate-500">
+              <th className="min-w-[6rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.name")}
+              </th>
+              <th className="min-w-[6rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.price")}
+              </th>
+              <th className="min-w-[7.5rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.previousQty")}
+              </th>
+              <th className="min-w-[5.5rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.buyQty")}
+              </th>
+              <th className="min-w-[5.5rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.sellQty")}
+              </th>
+              <th className="min-w-[7.5rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.finalQty")}
+              </th>
+              <th className="min-w-[6.5rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.finalAmount")}
+              </th>
+              <th className="min-w-[5.5rem] whitespace-nowrap px-2 py-2 font-medium">
+                {t("result.finalWeight")}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -224,15 +253,17 @@ export function PortfolioResultPanel({
                   h.isCash ? "bg-slate-50" : ""
                 }`}
               >
-                <td className="px-2 py-2.5 font-medium">{h.name}</td>
-                <td className="px-2 py-2.5">
+                <td className="min-w-[6rem] whitespace-nowrap px-2 py-2.5 font-medium">
+                  {h.name}
+                </td>
+                <td className="min-w-[6rem] whitespace-nowrap px-2 py-2.5">
                   {h.isCash ? "—" : formatMoney(h.price, currency)}
                 </td>
-                <td className="px-2 py-2.5">
+                <td className="min-w-[7.5rem] whitespace-nowrap px-2 py-2.5">
                   {h.isCash ? "—" : h.previousQuantity}
                 </td>
                 <td
-                  className="px-2 py-2.5 font-semibold"
+                  className="min-w-[5.5rem] whitespace-nowrap px-2 py-2.5 font-semibold"
                   style={
                     !h.isCash && h.addedQuantity > 0
                       ? { color: colors.buy }
@@ -242,7 +273,7 @@ export function PortfolioResultPanel({
                   {h.isCash ? "—" : h.addedQuantity}
                 </td>
                 <td
-                  className="px-2 py-2.5 font-semibold"
+                  className="min-w-[5.5rem] whitespace-nowrap px-2 py-2.5 font-semibold"
                   style={
                     !h.isCash && (h.soldQuantity ?? 0) > 0
                       ? { color: colors.sell }
@@ -251,13 +282,13 @@ export function PortfolioResultPanel({
                 >
                   {h.isCash ? "—" : h.soldQuantity ?? 0}
                 </td>
-                <td className="px-2 py-2.5 font-semibold">
+                <td className="min-w-[7.5rem] whitespace-nowrap px-2 py-2.5 font-semibold">
                   {h.isCash ? "—" : h.finalQuantity}
                 </td>
-                <td className="px-2 py-2.5">
+                <td className="min-w-[6.5rem] whitespace-nowrap px-2 py-2.5">
                   {formatMoney(h.finalValue, currency)}
                 </td>
-                <td className="px-2 py-2.5">
+                <td className="min-w-[5.5rem] whitespace-nowrap px-2 py-2.5">
                   {formatGroupedNumber(h.finalWeight, { maxFractionDigits: 2 })}%
                 </td>
               </tr>
@@ -308,17 +339,30 @@ function TradeRow({
   const amount = plan.price * qty;
   return (
     <tr className="border-b border-slate-100 text-slate-800">
-      <td className="px-2 py-2.5 font-medium">{plan.name}</td>
-      <td className="px-2 py-2.5">{formatMoney(plan.price, currency)}</td>
-      <td className="px-2 py-2.5">
+      <td className="min-w-[6rem] whitespace-nowrap px-2 py-2.5 font-medium">
+        {plan.name}
+      </td>
+      <td className="min-w-[6rem] whitespace-nowrap px-2 py-2.5">
+        {formatMoney(plan.price, currency)}
+      </td>
+      <td className="min-w-[5.5rem] whitespace-nowrap px-2 py-2.5">
         {formatGroupedNumber(plan.weight, { maxFractionDigits: 3 })}%
       </td>
-      <td className="px-2 py-2.5">{formatMoney(plan.targetAmount, currency)}</td>
-      <td className="px-2 py-2.5">{plan.previousQuantity}</td>
-      <td className="px-2 py-2.5 font-semibold" style={{ color: qtyColor }}>
+      <td className="min-w-[6.5rem] whitespace-nowrap px-2 py-2.5">
+        {formatMoney(plan.targetAmount, currency)}
+      </td>
+      <td className="min-w-[7.5rem] whitespace-nowrap px-2 py-2.5">
+        {plan.previousQuantity}
+      </td>
+      <td
+        className="min-w-[5.5rem] whitespace-nowrap px-2 py-2.5 font-semibold"
+        style={{ color: qtyColor }}
+      >
         {qty}
       </td>
-      <td className="px-2 py-2.5">{formatMoney(amount, currency)}</td>
+      <td className="min-w-[6rem] whitespace-nowrap px-2 py-2.5">
+        {formatMoney(amount, currency)}
+      </td>
     </tr>
   );
 }
@@ -353,19 +397,19 @@ function HoldingsSummaryRow({
     >
       <td
         colSpan={6}
-        className={`px-2 py-2.5 text-right ${
+        className={`whitespace-nowrap px-2 py-2.5 text-right ${
           emphasize ? "text-slate-800" : "text-slate-600"
         }`}
       >
         {label}
       </td>
       <td
-        className="px-2 py-2.5 tabular-nums"
+        className="min-w-[6.5rem] whitespace-nowrap px-2 py-2.5 tabular-nums"
         style={valueColor ? { color: valueColor } : undefined}
       >
         {value}
       </td>
-      <td className="px-2 py-2.5" />
+      <td className="min-w-[5.5rem] px-2 py-2.5" />
     </tr>
   );
 }
