@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import { Provider as JotaiProvider } from "jotai";
 import { fontInter, fontNotoSansJp } from "@/lib/fonts";
 import "./globals.css";
+
+/** GSC HTML 태그 확인용 (삭제하지 말 것) */
+export const metadata: Metadata = {
+  verification: {
+    google: "33ga0dbjQg_82U4F_MMzUEIKjAJh04a1E2argj_FSi0",
+  },
+};
 
 export default function RootLayout({
   children,
